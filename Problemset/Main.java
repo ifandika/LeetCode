@@ -1,21 +1,19 @@
 import java.util.*;
+import java.io.*;
+import java.math.*;
 
 public class Main {
 
 	public static void main(String[] args) {
-		int[] digits = {1, 2, 3};
+		System.out.println(climbStair(5));
+	}
 
-		int n = 0;
-		for(var v : digits) {
-			n *= 10;
-			n += v;
+	public static int climbStair(int n) {
+		if(n < 2) {
+			return 1;
 		}
-		n += 1;
-		String s = String.valueOf(n);
-		int tempRes = Integer.parseInt(s), int result = 0;
-		while(true) {
-			
+		else {
+			return climbStair(n-1) + climbStair(n-2);
 		}
-		System.out.println(Arrays.toString(result));
 	}
 }
