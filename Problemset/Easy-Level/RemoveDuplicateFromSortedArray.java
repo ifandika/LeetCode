@@ -51,4 +51,22 @@ public class RemoveDuplicateFromSortedArray {
 		}
 		return head;
 	}
+	
+	// Rubah nilai yang duplikat dengan 0
+	// Lalu urutkan nilai .sort()
+	// Maka tidak perlu buat array baru
+	public ListNode solution2(ListNode head) {
+		int value = -1;
+		ListNode buffer = head;
+		while(buffer != null) {
+			int hVal = head.val;
+			if(hVal != value && value >= 0) {
+				value = hVal;
+			}
+			else if(value == hVal) {
+				hVal = -1;
+			}
+		}
+		return head;
+	}
 }
