@@ -51,9 +51,11 @@ public class RotateImage {
 			{13,3,6,7},
 			{15,14,12,16}
 		};
-		rotateImage(val2);
+		r(val2);
+		display(val2);
 	}
 
+	// Solusi 1
 	static void rotateImage(int[][] matrix) {
 		int length = matrix.length;
         for (int i = 0; i < length / 2; i++) { // Menukar nilai bawah dgn nilai atas
@@ -68,6 +70,23 @@ public class RotateImage {
                 matrix[j][i] = temp;
             }
         }
+	}
+
+	// Solusi 2
+	static void r(int[][] matrix) {
+		int length = matrix.length;
+		for (int i = 0; i < length - 1; i++) {
+            for (int j = i + 1; j < length; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+        for(int i = 0; i < length; i++) {
+			int temp = matrix[i][0];
+			matrix[i][0] = matrix[i][length-1];
+			matrix[i][length-1] = temp;
+		}
 	}
 
 	static void display(int[][] val) {
