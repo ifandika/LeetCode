@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PlusOne {
+public class E66PlusOne {
 	public int[] solution(int[] digits) {
 		int n = 0;
 		for(var v : digits) {

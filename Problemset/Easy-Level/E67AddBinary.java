@@ -10,8 +10,8 @@ Input: a = "1010", b = "1011"
 Output: "10101"
 */
 
-public class AddBinary {
+public class E67AddBinary {
 	public String solution(String a, String b) {
-
+		return null;
 	}
 }

@@ -12,8 +12,8 @@ Output: ""
 Penjelasan: There is no common prefix among the input strings.
 */
 
-public class LongestCommonPrefix {
+public class E14LongestCommonPrefix {
 	public String solution(String[] s) {
-
+		return null;
 	}
 }

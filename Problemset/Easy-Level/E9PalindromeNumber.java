@@ -36,17 +36,23 @@ n jika dibalik nilainya = 121-
 - Return jika hasil nilai kebalikan = n maka true sebaliknya false
 */
 
-public class IsPalindrome {
-	public boolean solution(int n) {
-	    if(x < 0) return false;
-	    if(x == 1 || x == 0) return true;
+public class E9PalindromeNumber {
+	public static void main(String[] args) {
+		int num = 987656789;
+
+		System.out.println(solution(num));
+	}
+
+	public static boolean solution(int num) {
+	    if(num < 0) return false;
+	    if(num <= 1 && num >= 0) return true;
 	    int rev = 0,
-	    	bfr = x;
-	    while(x > 0) {
-	      rev = rev * 10;
-	      rev = rev + (x % 10);
-	      x = x / 10;
+	    	bfr = num;
+	    while(num > 0) {
+			rev *= 10;
+			rev += (num % 10);
+			num /= 10;
 	    }
-	    return rev == bfr ? true : false;
+	    return (rev == bfr ? true : false);
 	}
 }

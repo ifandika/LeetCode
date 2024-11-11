@@ -18,7 +18,7 @@ Algoritma
   {@code nums} maka kita tetapkan ke array.
 - Lalu returnkan {@code index} total nilai yang tidak sama dengan nilai {@code nums}.
 */
-public class RemoveElement {
+public class E27RemoveElement {
 	public int solution(int[] nums, int val) {
 		if(nums.length < 1 || val < 0) return 0;
 		int index = 0;

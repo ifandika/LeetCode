@@ -1,24 +1,24 @@
-	Diberikan head dari sorted listNode, hapus semua duplikat sehingga elemen
-hanya muncul satu saja. kembalikan hasil listNode yang tidak duplikat.
+// 	Diberikan head dari sorted listNode, hapus semua duplikat sehingga elemen
+// hanya muncul satu saja. kembalikan hasil listNode yang tidak duplikat.
 
-Contoh 1:
-Input: head = 1, 1, 2, 2, 3
-Output: 1, 2, 3
-Penjelasan:
-head = 1, 1, 2, 2, 3
-n1 = 1 (pertama muncul)
-n2 = 1 (nilai sudah muncul maka duplikat)
-n3 = 2 (pertama muncul)
-n4 = 2 (nilai sudah muncul maka duplikat)
-n5 = 3 (pertama muncul)
-maka hasil
-	head = 1, 2, 3
+// Contoh 1:
+// Input: head = 1, 1, 2, 2, 3
+// Output: 1, 2, 3
+// Penjelasan:
+// head = 1, 1, 2, 2, 3
+// n1 = 1 (pertama muncul)
+// n2 = 1 (nilai sudah muncul maka duplikat)
+// n3 = 2 (pertama muncul)
+// n4 = 2 (nilai sudah muncul maka duplikat)
+// n5 = 3 (pertama muncul)
+// maka hasil
+// 	head = 1, 2, 3
 
-Algoritma 1:
-- Cek jika head null,blank
-- Jelajah dari n1 - panjang listNode
-- Ambil nilai pertama, lalu lanjut ke nilai kedua dan cek jika nilai kedua =
-  nilai pertama maka lewati dan seterusnya.
+// Algoritma 1:
+// - Cek jika head null,blank
+// - Jelajah dari n1 - panjang listNode
+// - Ambil nilai pertama, lalu lanjut ke nilai kedua dan cek jika nilai kedua =
+//   nilai pertama maka lewati dan seterusnya.
 
 
 class ListNode {
@@ -32,11 +32,11 @@ class ListNode {
 	}
 
 	ListNode(int val, ListNode next) { 
-		his.val = val; this.next = next; 
+		this.val = val; this.next = next; 
 	}
 }
 
-public class RemoveDuplicateFromSortedArray {
+public class E26RemoveDuplicateFromSortedArray {
 	
 	public ListNode solution(ListNode head) {
 		if(head == null) return null;
