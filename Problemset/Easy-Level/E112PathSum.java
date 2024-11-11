@@ -38,7 +38,7 @@ class TreeNode {
 	}
 }
 
-public class PathSum {
+public class E112PathSum {
 	static int res = 0;
 	public static boolean solution(TreeNode root, int targetSum) {
 		return sum(root, targetSum, 0) == targetSum ? true : false;

@@ -47,12 +47,12 @@ public class E9PalindromeNumber {
 	    if(num < 0) return false;
 	    if(num <= 1 && num >= 0) return true;
 	    int rev = 0,
-	    	bfr = num;
+	    	cloneOri = num;
 	    while(num > 0) {
 			rev *= 10;
 			rev += (num % 10);
 			num /= 10;
 	    }
-	    return (rev == bfr ? true : false);
+	    return (rev == cloneOri ? true : false);
 	}
 }
