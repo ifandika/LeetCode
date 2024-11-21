@@ -23,7 +23,7 @@
 // Menggunakan matriks eksponen
 
 
-public class ClimbingStairs {
+public class E70_ClimbingStairs {
 	public int climbStair(int n) {
 		if(n < 2) {
 			return 1;
