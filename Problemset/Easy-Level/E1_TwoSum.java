@@ -8,7 +8,7 @@ import java.util.*;
  * Solution:
  * 
  */
-public class E1TwoSum {
+public class E1_TwoSum {
 	public static void main(String[] args) {
 		int[] num = {1, 3, 4};
 		int target = 5;

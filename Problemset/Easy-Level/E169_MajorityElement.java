@@ -12,7 +12,7 @@
 // Output: 2
 import java.util.*;
 
-public class MajorityElement {
+public class E169_MajorityElement {
 	public int solution(int[] nums) {
 		int length = nums.length;
 		if(nums == null || length == 0) {

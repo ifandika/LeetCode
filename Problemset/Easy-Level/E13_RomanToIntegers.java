@@ -31,7 +31,7 @@ Penjelasan: M = 1000, CM = 900, XC = 90 and IV = 4.
 - 
 */
 
-public class E13RomanToIntegers {
+public class E13_RomanToIntegers {
 	public int solution(String s) {
 		HashMap<Character, Integer> hm = new HashMap<>(7);
 		hm.put('I', 1);

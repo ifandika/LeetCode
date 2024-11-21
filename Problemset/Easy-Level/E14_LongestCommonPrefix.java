@@ -12,7 +12,7 @@ Output: ""
 Penjelasan: There is no common prefix among the input strings.
 */
 
-public class E14LongestCommonPrefix {
+public class E14_LongestCommonPrefix {
 	public String solution(String[] s) {
 		return null;
 	}
