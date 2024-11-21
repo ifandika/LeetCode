@@ -17,8 +17,7 @@ class TreeNode {
 	}
 }
 
-public class ConvertSortedArrayToBinarySearchTree {
-
+public class E108_ConvertSortedArrayToBinarySearchTree {
 	public static void main(String[] args) {
 		int[] nums = {-10, -3, 0, 5, 9};
 		// TreeNode res = solution(nums);
