@@ -1,5 +1,5 @@
 /**
- * https://leetcode.com/problems/remove-element
+ * https://leetcode.com/problems/remove-element/
  * 
  * Diberikan array bilangan bulat {@code nums}, dan variabel {@code val}. Hapus semua nilai
  * yang bernilai val pada elemen array {@code nums}. Urutan elemen data array mungkin berubah.
@@ -21,8 +21,17 @@
  *   {@code nums} maka kita tetapkan ke array.
  * - Lalu returnkan {@code index} total nilai yang tidak sama dengan nilai {@code nums}.
 */
-public class E27RemoveElement {
-	public int solution(int[] nums, int val) {
+import java.util.*;
+
+public class E27_RemoveElement {
+    public static void main(String[] args) {
+        int[] nums = {3, 2, 2, 3};
+        int val = 3;
+
+        System.out.println(solution2(nums, val));
+    }
+
+	public static int solution(int[] nums, int val) {
 		int length = nums.length;
 		if(length < 1 ) return 0;
 		int index = 0;
@@ -33,4 +42,18 @@ public class E27RemoveElement {
 		}
 		return index;
 	}
+
+    public static int solution2(int[] nums, int val) {
+        int length = nums.length;
+        if(length < 1) return 0;
+
+        Arrays.sort(nums);
+        int index = 0;
+        for(int i = 0; i < length; i++) {
+            if(nums[i] != val) {
+                nums[index++] = nums[i];
+            }
+        }
+        return index;
+    }
 }

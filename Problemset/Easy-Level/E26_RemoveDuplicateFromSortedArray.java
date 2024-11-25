@@ -1,5 +1,5 @@
 /**
- * https://leetcode.com/problems/remove-duplicates-from-sorted-array
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  *
  * 
  * Diberikan head dari sorted listNode, hapus semua duplikat sehingga elemen
