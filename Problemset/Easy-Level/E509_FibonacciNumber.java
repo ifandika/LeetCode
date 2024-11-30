@@ -19,8 +19,13 @@ public class E509_FibonacciNumber {
     }
 
     /**
-     * 
-     * 
+     * - Cek jika nilai = 1 maka kita kembalikan 1
+     * - Jika nilai <= 0 maka kita kembalikan 0
+     * - Ini untuk kondisi jika nilai < 3, karena semisal nilai n = 2
+     *   maka
+     *   = (2-1) + (2-2)
+     *   = 1 + 0
+     * - lalu rekursif dengan n-1 + n-2
      */
     public static int solution(int n) {
         if(n == 1) return 1;
