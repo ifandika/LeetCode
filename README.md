@@ -2,7 +2,7 @@
 
 ![](resource/ic_leetcode.png)
 
-Contains problems and solutions from the [LeetCode] platform/website (https://leetcode.com) which specifically uses the Java programming language.
+Contains problems and solutions from the platform/website [LeetCode](https://leetcode.com) which specifically uses the Java programming language.
 
 # Problemset
 
