@@ -2,7 +2,7 @@
 
 ![](resource/ic_leetcode.png)
 
-Berisi masalah dan solusi dari platform/website [LeetCode](https://leetcode.com) yang khususnya dengan menggunakan bahasa pemrograman Java.
+Contains problems and solutions from the [LeetCode] platform/website (https://leetcode.com) which specifically uses the Java programming language.
 
 # Problemset
 
