@@ -29,6 +29,9 @@ public class M46_Permutations {
         return result;
     }
 
+    /**
+     * 
+     */
     public static void permutation(List<List<Integer>> list, int[] nums, ArrayList<Integer> tempList) {
         int length = nums.length;
         if(tempList.size() == length) {
