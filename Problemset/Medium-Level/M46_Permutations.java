@@ -15,7 +15,7 @@ import java.util.*;
 public class M46_Permutations {
     public static void main(String[] args) {
         // Test-1
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = {1, 2, 3};
         List<List<Integer>> result = solution(nums);
         System.out.println(result);
     }
@@ -30,7 +30,14 @@ public class M46_Permutations {
     }
 
     /**
-     * 
+     * - ambil panjang array untuk batas jelajah
+     * - jika ukuran {@code tempList} = panjang array maka kita masukan hasil {@code tempList} ke {@code list}
+     * - jika tidak kita for dari 0 - panjang array
+     * - lalu kita cek jika {@code tempList} berisi nilai array {@code nums} maka kita lompati karena kita perlu kombinasi
+     * - lalu masukan {@code nums} ke {@code tempList}
+     * - lalu rekursif kita panggil fungsi lagi, karena kombinasi jadi kita mulai dari awal, dan jika nilai sudah dimasukan kita lewati
+     *   untuk kita ambil nilai selanjutnya
+     * - 
      */
     public static void permutation(List<List<Integer>> list, int[] nums, ArrayList<Integer> tempList) {
         int length = nums.length;
@@ -42,8 +49,8 @@ public class M46_Permutations {
                 if(tempList.contains(nums[i])) continue;
                 tempList.add(nums[i]);
                 permutation(list, nums, tempList);
-                tempList.remove(tempList.size() - 1);
-                System.out.println(tempList);
+                System.out.println("=> "+tempList.get(tempList.size() - 1));
+                // tempList.remove(tempList.size() - 1);
             }
         }
     }
