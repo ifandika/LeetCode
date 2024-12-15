@@ -42,6 +42,7 @@ public class M46_Permutations {
     public static void permutation(List<List<Integer>> list, int[] nums, ArrayList<Integer> tempList) {
         int length = nums.length;
         if(tempList.size() == length) {
+            System.out.println(" = "+tempList);
             list.add(new ArrayList<Integer>(tempList));
         }
         else {
@@ -50,7 +51,7 @@ public class M46_Permutations {
                 tempList.add(nums[i]);
                 permutation(list, nums, tempList);
                 System.out.println("=> "+tempList.get(tempList.size() - 1));
-                // tempList.remove(tempList.size() - 1);
+                tempList.remove(tempList.size() - 1); // Remove same/duplicate number
             }
         }
     }
