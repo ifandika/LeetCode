@@ -10,15 +10,15 @@ import java.math.*;
 public class E2325_DecodeTheMessage {
     public static void main(String[] args) {
         String key = "the quick brown fox jumps over the lazy dog", message = "vkbs bs t suepuv";
-
         System.out.println(solution(key, message));
     }
 
     /**
+     * Penjelasan:
+     * 
      * - Deklarasi HashMap untuk menyimpan nilai dari key yang dimana kita konversi ke 'a' - 'z'
      * - String Builder untuk kita susun dari nilai karakter pada arraylist
-     * - Integer wordA = 97 dimana jika kita konversi ke char = 'a', lalu indexAl untuk index pengambilan
-     *   nilai arraylist
+     * - Integer wordA = 97 dimana jika kita konversi ke char = 'a'
      * - Pertama kita masukan key dengan nilai awal 'a' ke dalam hashmap
      * - Perulangan pertama dari 0 - panjang.key, kita ambil karakter pada string key kita masukan dalam
      *   char, kita cek jika char tidak kosong/spasi dan nilai pada HashMap tidak ada/belum pernah dimasukan,
@@ -27,6 +27,11 @@ public class E2325_DecodeTheMessage {
      *   kita ambil nilai dengan key dari HashMap dan kita masukan dalam StringBuilder, jika tidak kita tambahkan
      *   spasi/string kosong " "
      * - Lalu terakhir kita StringBuilder ke string (#toString())
+     * 
+     * 
+     * Kompleksitas:
+     * - O(n)
+     * 
      */
     public static String solution(String key, String message) {
         HashMap<Character, Character> hm = new HashMap<>();
