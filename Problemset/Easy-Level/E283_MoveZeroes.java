@@ -20,6 +20,27 @@ public class E283_MoveZeroes {
      * 
      */
     public static void solution(int[] nums) {
-
+        int l = nums.length;
+        int end = l-1;
+        int zeroExits = 0;
+        for (int i = 0; i < l; i++) {
+            if(nums[i] < 1) {
+                zeroExits = 1;
+                break;
+            }
+        }
+        if(zeroExits < 1) {
+            return;
+        }
+        Arrays.sort(nums);
+        for (int i = 0; i < l; i++) {
+            if(nums[i] < 1 && i <= end) {
+                int swap = nums[i];
+                nums[i] = nums[end];
+                nums[end] = swap;
+                end--;
+            }
+        }
+        Arrays.sort(nums, 0, end+1);
     }
 }
