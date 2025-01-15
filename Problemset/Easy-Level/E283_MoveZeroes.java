@@ -15,32 +15,21 @@ public class E283_MoveZeroes {
     }
 
     /**
-     * - bisa tukar dengan nilai yang akan kita pindahkan
-     * - jika nilai < 1 dan nilai 0 maka return
-     * 
+     * - Gunakan 2 pointer untuk kiri & kanan (depan & belakang)
+     * - Perulangan dari 0 - length
+     * - Lalu cek jika nilai depan bukan 0 maka kita tukar dengan nilai left (belakang)
+     * - Lakukan swap nilai
+     * - Lakukan hingga akhir
      */
     public static void solution(int[] nums) {
-        int l = nums.length;
-        int end = l-1;
-        int zeroExits = 0;
-        for (int i = 0; i < l; i++) {
-            if(nums[i] < 1) {
-                zeroExits = 1;
-                break;
+        int left = 0;
+        for(int right = 0; right < nums.length; right++) {
+            if(nums[right] != 0) {
+                int swap = nums[right];
+                nums[right] = nums[left];
+                nums[left] = swap;
+                left++;
             }
         }
-        if(zeroExits < 1) {
-            return;
-        }
-        Arrays.sort(nums);
-        for (int i = 0; i < l; i++) {
-            if(nums[i] < 1 && i <= end) {
-                int swap = nums[i];
-                nums[i] = nums[end];
-                nums[end] = swap;
-                end--;
-            }
-        }
-        Arrays.sort(nums, 0, end+1);
     }
 }
