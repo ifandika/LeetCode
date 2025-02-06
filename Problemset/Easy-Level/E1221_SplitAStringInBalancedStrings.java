@@ -53,6 +53,9 @@ public class E1221_SplitAStringInBalancedStrings {
   }
 
   // More simple
+  /**
+   * Sama seperti solusi di atas namun lebih sederhana
+   */
   public static int solution2(String s) {
     int l = 0, r = 0, total = 0;
     char[] c = s.toCharArray();
