@@ -1,10 +1,11 @@
-
-public class ValidPalindrome {
-
-	public boolean solution(String s) {
+/**
+ * https://leetcode.com/problems/palindrome-number/
+ * 
+ */
+public class E125_ValidPalindrome {
+	public static boolean solution(String s) {
 		Strng lower = s.toLowerCase();
-		int left = 0,
-			right = s.length() - 1;
+		int left = 0, right = s.length() - 1;
 
 		while(left < right) {
 			while(left < right && !Character.isLetterOrDigit(lower.charAt(left))) {

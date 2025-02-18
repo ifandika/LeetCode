@@ -1,6 +1,6 @@
 import java.util.*;
 
-/*	Diberikan nilai integer 'n', bernilai palindrome jika nilai dibalik bernilai sama dengan
+/*  Diberikan nilai integer 'n', bernilai palindrome jika nilai dibalik bernilai sama dengan
 nilai awal jika tidak maka bukan palindrome.
 - 'n' dapat bernilai positif & negatif
 
@@ -36,23 +36,21 @@ n jika dibalik nilainya = 121-
 - Return jika hasil nilai kebalikan = n maka true sebaliknya false
 */
 
-public class E9PalindromeNumber {
-	public static void main(String[] args) {
-		int num = 987656789;
+public class E9_PalindromeNumber {
+  public static void main(String[] args) {
+    int num = 987656789;
+    System.out.println(solution(num));
+  }
 
-		System.out.println(solution(num));
-	}
-
-	public static boolean solution(int num) {
-	    if(num < 0) return false;
-	    if(num <= 1 && num >= 0) return true;
-	    int rev = 0,
-	    	cloneOri = num;
-	    while(num > 0) {
-			rev *= 10;
-			rev += (num % 10);
-			num /= 10;
-	    }
-	    return (rev == cloneOri ? true : false);
-	}
+  public static boolean solution(int num) {
+    if (num < 0) return false;
+    if (num <= 1 && num >= 0) return true;
+    int rev = 0, cloneOri = num;
+    while (num > 0) {
+      rev *= 10;
+      rev += (num % 10);
+      num /= 10;
+    }
+    return (rev == cloneOri ? true : false);
+  }
 }
