@@ -68,12 +68,12 @@ public class M46_Permutations {
   }
 
   public static void oprtSolution2(int[] nums, List<List<Integer>> ans, List<Integer> temp, boolean[] freq) {
-    if (temp.size() == nums.length) {
+    if(temp.size() == nums.length) {
       ans.add(new ArrayList<>(temp));
       return;
     }
-    for (int i = 0; i < nums.length; i++) {
-      if (!freq[i]) {
+    for(int i = 0; i < nums.length; i++) {
+      if(!freq[i]) {
         freq[i] = true;
         temp.add(nums[i]);
         out.println(Arrays.toString(temp.toArray()));
