@@ -6,10 +6,14 @@
 import java.util.*;
 import java.io.*;
 import java.math.*;
+import static java.lang.System.*;
 
 public class M287_FindTheDuplicateNumber {
   public static void main(String[] args) {
-      
+    int[] nums = {1,3,4,2,2};
+    int duplicate = solution(nums);
+    out.println("nums: "+nums);
+    out.println("duplicate: "+duplicate);
   }
 
   /**
