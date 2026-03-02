@@ -21,9 +21,9 @@ public class MaximumAverageSubarray1 {
 			}
 			return (sum /= k);
 		}
-
+	}
 	// Otehr solution
-	public double findMaxAverage(int[] nums, int k) {
+	public static double findMaxAverage(int[] nums, int k) {
     int sm=0;
     for(int i=0;i<k;i++) sm+=nums[i];
     int i=k;

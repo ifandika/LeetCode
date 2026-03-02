@@ -1,6 +1,4 @@
-
-import java.util.*;
-
+/**
 Diberikan nilai, returnkan hasil berupa list. Jumlahkan dua nilai untuk hasil
 dibawahnya
 
@@ -20,9 +18,15 @@ loop dari 0 hingga numRows
 1 2 1
 1 3 3 1
 1 4 6 4 1
+*/
 
+import java.util.*;
 
-public class PascalsTriangle {
+public class E118_PascalsTriangle {
+	public static void main(String[] args) {
+		
+	}
+
 	public List<List<Integer>> solution(int numRows) {
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
 		for(int rows = 0; rows < numRows; rows++) {

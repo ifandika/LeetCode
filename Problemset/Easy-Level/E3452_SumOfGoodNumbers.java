@@ -9,10 +9,7 @@ import java.math.*;
 
 public class E3452_SumOfGoodNumbers {
   public static void main(String[] args) {
-    int[] nums = [1,3,2,1,5,4];
-    int k = 2;
 
-    int res = solution()
   }
 
   /**

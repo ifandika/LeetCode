@@ -4,8 +4,6 @@
  */
 
 import java.util.*;
-import java.io.*;
-import java.math.*;
 
 public class E3280_ConvertDateToBinary {
     public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class E3280_ConvertDateToBinary {
      * - Terakhir kita hapus '-' yang terkakhir (yyyy-mm-dd-)
      * - Lalu kembalikan ke toString()
      */
-    public static String void solution(String date) {
+    public static String solution(String date) {
         StringBuilder sb = new StringBuilder();
         for(String s : date.split("-")){
             sb.append(Integer.toBinaryString(Integer.parseInt(s)));

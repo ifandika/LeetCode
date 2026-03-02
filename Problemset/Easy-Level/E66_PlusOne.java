@@ -1,9 +1,9 @@
 import java.util.*;
 
-public class E66PlusOne {
+public class E66_PlusOne {
 	public int[] solution(int[] digits) {
 		int n = 0;
-		for(var v : digits) {
+		for (var v : digits) {
 			n *= 10;
 			n += v;
 		}
@@ -11,7 +11,7 @@ public class E66PlusOne {
 		String s = String.valueOf(n);
 		int sLength = s.length();
 		int[] result = new int[sLength];
-		for(int i = 0; i < sLength; i++) {
+		for (int i = 0; i < sLength; i++) {
 			result[i] = s.charAt(i);
 		}
 		return result;

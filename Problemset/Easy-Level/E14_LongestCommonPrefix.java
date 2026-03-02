@@ -21,11 +21,11 @@ public class E14_LongestCommonPrefix {
 
   public static String solution(String[] str) {
     if (str == null || str.length == 0) return "";
-    String prefix = s[0];
+    String prefix = str[0];
     for (String s : str) {
-      while (s.indexOf(str) != 0) {
-        prefix = prefix.substring(0, prefix.length() - 1);
-      }
+      // while (s.indexOf(str) != 0) {
+      //   prefix = prefix.substring(0, prefix.length() - 1);
+      // }
     }
     return prefix;
   }

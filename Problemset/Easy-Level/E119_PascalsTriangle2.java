@@ -8,10 +8,10 @@
 
 import java.util.*;
 
-public class PascalsTriangle2 {
+public class E119_PascalsTriangle2 {
 
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(solution(3)));	
+		// System.out.println(Arrays.toString(solution(3)));	
 	}
 
 	public static List<Integer> solution(int rowIndex) {
@@ -31,7 +31,7 @@ public class PascalsTriangle2 {
 				return listPrev;
 			}
 			else {
-				temp.add(column, listPrev.get(rows).get(column)+listPrev.get(rows-1).get(column));
+				// temp.add(column, listPrev.get(rows).get(column)+listPrev.get(rows-1).get(column));
 				listPrev = temp;
 			}
 		}
