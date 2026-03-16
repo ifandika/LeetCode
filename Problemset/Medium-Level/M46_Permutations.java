@@ -1,24 +1,22 @@
-/**
- * https://leetcode.com/problems/permutations
- *
- * - Diberikan nilai [1,2,3]
- * - Buat semua kemungkinan dari nilai
- * - Output = [[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]]
- *
- * Klu
- * - Permutasi & Kombinasi dalam matematika
- * - Nilai awal diturak dengan semua jenis nilai selain nilai awal
- */
-
 import java.util.*;
-import static java.lang.System.*;
 
 public class M46_Permutations {
   public static void main(String[] args) {
-    // Test-1
-    int[] nums = { 1, 2, 3, 4 };
-    List<List<Integer>> result = solution2(nums);
-    System.out.println(result);
+    // Example 1
+    int[] input1Nums = { 1, 2, 3 };
+    List<List<Integer>> output1Nums = List.of(
+      List.of(1,2,3),
+      List.of(1,3,2),
+      List.of(2,1,3),
+      List.of(2,3,1),
+      List.of(3,1,2),
+      List.of(3,2,1)
+    );
+
+    List<List<Integer>> result = solution(input1Nums);
+    System.out.println("Input \t: "+Arrays.toString(input1Nums));
+    System.out.println("Output \t: "+output1Nums.toString());
+    System.out.println("Result \t: "+result.toString());
   }
 
   // Solution 1
@@ -27,7 +25,7 @@ public class M46_Permutations {
    */
   public static List<List<Integer>> solution(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
-    permutation(result, nums, new ArrayList<>());
+    oprtSolution(result, nums, new ArrayList<>());
     return result;
   }
 
@@ -39,20 +37,17 @@ public class M46_Permutations {
    * - lalu masukan {@code nums} ke {@code tempList}
    * - lalu rekursif kita panggil fungsi lagi, karena kombinasi jadi kita mulai dari awal, dan jika nilai sudah dimasukan kita lewati
    *   untuk kita ambil nilai selanjutnya
-   * -
    */
-  public static void permutation(List<List<Integer>> list, int[] nums, ArrayList<Integer> tempList) {
+  public static void oprtSolution(List<List<Integer>> list, int[] nums, ArrayList<Integer> tempList) {
     int length = nums.length;
     if(tempList.size() == length) {
-      System.out.println(" = " + tempList);
       list.add(new ArrayList<Integer>(tempList));
     }
     else {
       for (int i = 0; i < length; i++) {
         if (tempList.contains(nums[i])) continue;
         tempList.add(nums[i]);
-        permutation(list, nums, tempList);
-        System.out.println("=> " + tempList.get(tempList.size() - 1));
+        oprtSolution(list, nums, tempList);
         tempList.remove(tempList.size() - 1); // Remove same/duplicate number
       }
     }
@@ -76,9 +71,7 @@ public class M46_Permutations {
       if(!freq[i]) {
         freq[i] = true;
         temp.add(nums[i]);
-        out.println(Arrays.toString(temp.toArray()));
         oprtSolution2(nums, ans, temp, freq);
-        System.out.println("=> " + temp.get(temp.size() - 1));
         temp.remove(temp.size() - 1);
         freq[i] = false;
       }
